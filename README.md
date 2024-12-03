@@ -61,12 +61,15 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon)
 #### 1. GitHub Web 이용하기
 
 `feature/login` branch를 `develop/user` branch에 merge 한다고 가정해 봅시다.
-`feature/login` branch를 push하면, GitHub 레포지토리 페이지에서  
-`Compare & Create Pull Request` 버튼이 보이는데, 해당 기능을 사용하시면 됩니다.
+
+- `feature/login` branch를 push 합니다.
+- GitHub 레포지토리 페이지에서 `Compare & Create Pull Request` 버튼이 생성됩니다.
+- 해당 기능을 클릭한 후, `base`와 `compare` branch를 각각 아래와 같이 보이게 설정합니다.
+- base: `develop/user` <- compare: `featture/login`과 같이 설정 후 사용하시면 됩니다.
 
 #### 2. CLI 이용하기
 
-1번과 같은 상황을 가정합니다.
+1번과 동일한 상황을 가정합니다.
 
 - `git switch develop/user` 를 통해 이동하고 `git pull origin develop/user`를 통해 최신 변경사항을 적용합니다.
 - `git merge feature/login`을 통해 merge를 시도합니다.
