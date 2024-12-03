@@ -43,7 +43,7 @@ const parseBearerJwtFromHeader = {
 };
 
 // Strategy 선언 : Bearer JWT에 담겨오는 AccessToken을 파싱하여 인증하는 전략입니다.
-const jwtStrategy = new JWTStrategy(
+const AccessTokenStrategy = new JWTStrategy(
   parseBearerJwtFromHeader,
   async (jwt_payload, done) => {
     logger.info(
@@ -61,5 +61,5 @@ const jwtStrategy = new JWTStrategy(
 );
 
 module.exports = {
-  jwtStrategy,
+  AccessTokenStrategy,
 };
