@@ -39,7 +39,7 @@ const parseBearerJwtFromHeader = {
       return token;
     },
   ]),
-  secretOrKey: config.JWT_SECRET, // 비밀 키 설정
+  secretOrKey: JWT_SECRET, // 비밀 키 설정
 };
 
 // Strategy 선언 : Bearer JWT에 담겨오는 AccessToken을 파싱하여 인증하는 전략입니다.
