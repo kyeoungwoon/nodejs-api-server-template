@@ -1,8 +1,25 @@
-# Node.js Server Project Template
+# Peekle Backend 🚀
 
-이 레포지토리는 복잡한 프로젝트 초기 설정에 들어가는 시간을 절약하고자  
-다음과 같은 사항을 미리 작성해두었습니다.
+## Table of Contents 📚
+1. [How To ?](#how-to-)
+2. [Before We Start](#before-we-start)
+3. [Conventions & Template](#conventions--template)
+4. [Git Convention : Strategy](#git-convention--strategy)
+5. [Git Convention : Commit](#git-convention--commit)
+6. [Code Convention](#code-convention)
+7. [Project Architecture](#project-architecture)
 
+## How To ? 🛠️
+- 설치 및 실행 방법을 작성해주세요.
+
+## Before We Start ⚠️
+`test.test.js`라는 파일은 `.gitignore`에 의해,
+git에 추적되지 않습니다. 여러가지 테스트가 필요할 땐 위와 같은 파일명을 사용해주세요.
+혹시라도 `test.js`라는 파일이 필요할 수도 있어 `test.test.js`로 명명했습니다.
+
+## Conventions & Template 📋
+
+- GitHub Issue Template
 - Git 전략 : Git Flow, GitHub Flow
 - Code 작성 컨벤션 : 변수, 함수, 파일, 폴더 명명법
 - docker 및 docker-compose 파일 : 빠르고 쉬운 배포
@@ -17,13 +34,18 @@
 
 템플릿은 여러분의 취향에 맞게 수정하여 사용해주시고, 도움이 되셨다면 ⭐ 한번만 부탁드립니다.  
 preset 코드에 버그가 있을 경우 issue 생성하시어 남겨주시면 확인 후 반영하겠습니다.
+
 감사합니다.
 
+Repository URL -> [Click](https://github.com/kyeoungwoon/nodejs-api-server-template)  
 made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](https://blog.naver.com/kyeoungwoon)
 
-# Git Convention : Strategy
+# Git Convention : Strategy 🗂️
+1. [Git Flow](#strategy-1--git-flow)
+2. [GitHub Flow #1](#strategy-2--github-flow-1)
+3. [GitHub Flow #2](#strategy-3--github-flow-2)
 
-### Strategy #1 : Git Flow
+### Strategy #1 : Git Flow 🌊
 
 - 규모가 큰 프로젝트에 적합합니다.
 - 브랜치 종류 : main, develop, feature, release, hotfix
@@ -34,7 +56,7 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](
 4. release :
 5. hotfix :
 
-### Strategy #2 : GitHub Flow
+### Strategy #2 : GitHub Flow #1 🌐
 
 - 규모가 작고 잦은 기능수정과 배포가 있는 프로젝트에 적합합니다.
 - 브랜치 종류 : main, develop, feature
@@ -58,11 +80,17 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](
 - develop branch를 기준으로, 새로운 기능을 개발하는 branch 입니다.
 - 새로운 기능에 대한 bug fix는 feature branch 내에서 마친 후 develop branch로 PR을 생성해야 합니다.
 
-### Merge 및 Conflict 관련 tip
+### Strategy #3 : GitHub Flow #2 🌟
+
+- GitHub Flow #1과 유사하지만, `develop` branch를 사용하지 않습니다.
+- `main` `feature` 두 브랜치 종류로 구성되며, 해커톤과 같이 빠르게 완성하는 프로젝트에 적합합니다.
+- `main`을 base로, `feature` 브랜치를 생성해서 지속적으로 `main`에 merge 하는 전략입니다.
+
+### Merge 및 Conflict 관련 tip 🔀
 
 #### 크게 두 가지 방법을 사용할 수 있습니다.
 
-#### 1. GitHub Web 이용하기
+#### 1. GitHub Web 이용하기 🌐
 
 `feature/login` branch를 `develop/user` branch에 merge 한다고 가정해 봅시다.
 
@@ -71,7 +99,7 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](
 - 해당 기능을 클릭한 후, `base`와 `compare` branch를 각각 아래와 같이 보이게 설정합니다.
 - base: `develop/user` <- compare: `featture/login`과 같이 설정 후 사용하시면 됩니다.
 
-#### 2. CLI 이용하기
+#### 2. CLI 이용하기 💻
 
 1번과 동일한 상황을 가정합니다.
 
@@ -83,7 +111,7 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](
 
 ##### Git 전략들에 대해서 더 알아보고 싶다면 : [잘 정리해놓으신 분이 있습니다](https://sungjk.github.io/2023/02/20/branch-strategy.html)
 
-# Git Convention : Commit
+# Git Convention : Commit 📝
 
 `제목`, `본문`, `꼬리말` 세 부분으로 나뉩니다.  
 각 부분은 빈 줄로 구분되어야 합니다.
@@ -133,7 +161,7 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](
 - `Ref` : 참고할 이슈가 있을 때 사용
 - `Related to` : 해당 커밋에 관련된 이슈번호 (아직 해결되지 않은 경우)
 
-# Code Convention
+# Code Convention 💻
 
 ## 함수명
 
@@ -172,7 +200,7 @@ made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](
 - 폴더명은 길어질 경우 `-`를 활용하여 구분합니다. (kebab case)
 - eg. `my-page`, `user-info`
 
-## Error Handling
+## Error Handling ⚠️
 
 - `class CustomError extends Error`와 같이, JavaScript 기본 Error 객체를 extend 하여 Custom Error를 작성하여야 합니다.
 - Error는 세분화하여 각각 에러를 할당하는 것이 아닌, 대분류로 관리하여 reason으로 세부사항을 알 수 있도록 하여야 합니다.
@@ -207,7 +235,7 @@ class AlreadyExistError extends Error {
 }
 ```
 
-## Database
+## Database 🗄️
 
 #### _MySQL을 기준으로 설명합니다._
 
@@ -224,7 +252,7 @@ class AlreadyExistError extends Error {
 - 같은 내용의 Query를 여러번 날리는 것 보다는, `JOIN`이나 `BETWEEN` 등으로 한번에 가져와서 `Node.js`단에서 처리하는 것을 권합니다.
 - `image`등 파일은 `url`만을 저장해야 합니다. `binary data`를 직접적으로 저장하는 행위는 지양해야 할 1순위 입니다.
 
-## import / export
+## import / export 📦
 
 `ES6`와 `commonJS` 모두 동일하게 적용됩니다.
 
@@ -286,7 +314,7 @@ export const createNewUser = async (data) => {
 };
 ```
 
-# Project Architecture
+# Project Architecture 🏗️
 
 ## controllers
 
