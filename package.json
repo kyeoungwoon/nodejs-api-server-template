@@ -1,5 +1,5 @@
 {
-  "name": "peekle-api-server",
+  "name": "nodejs-api-server-template",
   "version": "1.0.0",
   "main": "index.js",
   "type": "commonjs",
@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "Kyeoung Woon Park <saveearth1@naver.com> (https://blog.naver.com/saveearth1)",
   "license": "MIT",
-  "description": "backend server for spectogether",
+  "description": "Backend API Server Template",
   "devDependencies": {
     "nodemon": "^3.1.7",
     "prettier": "^3.4.2",
