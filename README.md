@@ -1,6 +1,7 @@
-# Peekle Backend 🚀
+# NodeJS API Server Template 🚀
 
 ## Table of Contents 📚
+
 1. [How To ?](#how-to-)
 2. [Before We Start](#before-we-start)
 3. [Conventions & Template](#conventions--template)
@@ -10,9 +11,49 @@
 7. [Project Architecture](#project-architecture)
 
 ## How To ? 🛠️
+
 - 설치 및 실행 방법을 작성해주세요.
 
-## Before We Start ⚠️
+`./config.json`은 다음과 같은 형식입니다.  
+사용하실 값을 채워서 사용해주세요.
+
+```
+{
+  "SERVER": {
+    "PORT": 7777,
+    "FRONTEND_URL": "",
+    "SALT_ROUNDS": 12,
+    "JWT_SECRET": "",
+    "CIPHER_SECRET_KEY": ""
+  },
+  "DATABASE": {
+    "MYSQL_USER": "",
+    "MYSQL_PASSWORD": "",
+    "MYSQL_HOST": "",
+    "MYSQL_PORT": 0000,
+    "MYSQL_DATABASE": ""
+  },
+  "KAKAO": {
+    "KAKAO_REST_API_KEY": "",
+    "KAKAO_CLIENT_SECRET": "",
+    "KAKAO_REDIRECT_URI": "",
+    "KAKAO_REDIRECT_FAILURE": ""
+  },
+  "AWS": {
+  },
+  "COOLSMS": {
+    "API_KEY": "",
+    "API_SECRET": "",
+    "SENDER": ""
+  },
+  "OPEN_AI": {
+  }
+}
+
+```
+
+## Before We Start
+
 `test.test.js`라는 파일은 `.gitignore`에 의해,
 git에 추적되지 않습니다. 여러가지 테스트가 필요할 땐 위와 같은 파일명을 사용해주세요.
 혹시라도 `test.js`라는 파일이 필요할 수도 있어 `test.test.js`로 명명했습니다.
@@ -41,6 +82,7 @@ Repository URL -> [Click](https://github.com/kyeoungwoon/nodejs-api-server-templ
 made and owned by [@kyeoungwoon](https://github.com/kyeoungwoon) | [Naver Blog](https://blog.naver.com/kyeoungwoon)
 
 # Git Convention : Strategy 🗂️
+
 1. [Git Flow](#strategy-1--git-flow)
 2. [GitHub Flow #1](#strategy-2--github-flow-1)
 3. [GitHub Flow #2](#strategy-3--github-flow-2)
